@@ -1,0 +1,12 @@
+          <div class="text-right collapse navigation navbar-collapse navbar-ex1-collapse remove-space">
+            <% if logged_in? && is_customer? %>
+            <ul class="list-unstyled nav1 cl-effect-10">
+              <li>
+              <%= link_to new_rating_path, data: {hover: t(".rating")},
+                class: "#{'active' if current_page?(new_rating_path)}" do %>
+                <span><%= t ".rating" %></span>
+              <% end %>
+              </li>
+            </ul>
+            <% end %>
+        </div>
